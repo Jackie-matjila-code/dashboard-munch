@@ -1,0 +1,38 @@
+<div class="side-nav-menu">
+  <mat-nav-list class="side-header">
+    <div class="side-nav-title">Munch Concepts</div>
+  </mat-nav-list>
+
+  <div>
+    <ul class="nav-list">
+      <li class="nav-list-item">
+        <!-- <a
+        [href]="item.Url"
+        target="_blank"
+        [title]="item.Title"
+        [attr.data-id]="item.AdminMenuId"
+      >
+        <img [src]="'assets/images/' + item.Code + '.svg'" />
+        <div
+          [ngClass]="sideNavStatus ? 'active' : ''"
+          class="nav-item-title"
+        >
+          {{ item.Title }}
+        </div>
+      </a> -->
+        <a routerLink="/orders" class="nav-item"
+          ><mat-icon>home</mat-icon>Orders</a
+        >
+      </li>
+      <li>
+        <a routerLink="">Orders</a>
+      </li>
+      <li>
+        <a routerLink="">Orders</a>
+      </li>
+      <li>
+        <a routerLink="">Orders</a>
+      </li>
+    </ul>
+  </div>
+</div>

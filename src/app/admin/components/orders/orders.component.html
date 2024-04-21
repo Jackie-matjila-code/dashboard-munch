@@ -1,0 +1,67 @@
+<div class="container">
+  <div class="search">
+    <input
+      type="text"
+      name="search"
+      class="round"
+      placeholder="Search orders"
+    />
+  </div>
+
+  <mat-card class="filter-card">
+    <mat-card-content>
+      <div class="checkbox-container">
+        <mat-checkbox
+          class="example-margin"
+          [(indeterminate)]="indeterminate"
+          [labelPosition]="labelPosition"
+          [disabled]="disabled"
+          [color]="color"
+        ></mat-checkbox>
+        <div class="text-container">
+          <div class="title-text">Same day</div>
+          <p class="subtitle">37 orders, 40 items</p>
+        </div>
+      </div>
+    </mat-card-content>
+  </mat-card>
+
+  <mat-card class="order-card">
+    <mat-card-header>
+      <div class="card-header-content">
+        <div class="header-left">
+          <mat-card-title>John Doe</mat-card-title>
+          <mat-card-subtitle>Order Date: April 20, 2024</mat-card-subtitle>
+        </div>
+        <div class="header-right">
+          <mat-card-title>Next Day Shipping</mat-card-title>
+          <mat-card-subtitle>Arrival Date: April 21, 2024</mat-card-subtitle>
+        </div>
+      </div>
+    </mat-card-header>
+    <mat-divider></mat-divider>
+
+    <mat-card-content>
+      <div class="content-container">
+        <img
+          src="dummy-product-image.png"
+          alt="Product Image"
+          class="product-image"
+        />
+        <div class="product-details">
+          <div class="unique-code">Code: 123456</div>
+          <div class="product-name">Product Name: Example Product</div>
+          <div class="category">Category: Electronics</div>
+        </div>
+        <div class="stock-number">Stock: 50</div>
+      </div>
+    </mat-card-content>
+    <mat-divider></mat-divider>
+
+    <mat-card-actions>
+      <button mat-button class="left-button">Cancel</button>
+      <span class="spacer"></span>
+      <button mat-button color="primary" class="right-button">Save</button>
+    </mat-card-actions>
+  </mat-card>
+</div>

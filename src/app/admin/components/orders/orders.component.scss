@@ -1,0 +1,164 @@
+.round {
+  width: calc(100% - 30px); /* Adjusted width to accommodate the icon */
+  height: 17px;
+  border-radius: 5px;
+  border: 1px #fff solid;
+  padding: 5px 5px 5px 40px; /* Increased left padding to make space for the icon */
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 5;
+  box-shadow: 1px 0px 4px rgba(102, 102, 102, 0.3);
+  //background-image: url(""); /* Add the path to your search icon */
+  background-repeat: no-repeat; /* Prevent icon from repeating */
+  background-position: 10px center; /* Positioning the icon */
+}
+
+.round:focus-visible {
+  outline: none;
+}
+
+.corner {
+  position: absolute;
+  top: 3px;
+  left: 5px;
+  height: 20px;
+  width: 20px;
+  z-index: 10;
+  border-radius: 10px;
+  border: none;
+  background: #fff; /* Set the background color or use a transparent image */
+  /* Add the background image for the search icon here with "no-repeat" */
+}
+
+.search {
+  position: relative;
+  width: 97%;
+  height: 30px;
+}
+
+.container {
+  padding: 14px;
+}
+
+.filter-card {
+  margin-top: 10px;
+  width: 265px;
+}
+
+.checkbox-container {
+  display: flex;
+  align-items: center;
+}
+
+.text-container {
+  margin-left: 10px; /* Adjust as needed */
+}
+
+.title-text {
+  margin: 0;
+  font-size: 16px;
+}
+
+.subtitle {
+  margin: 0;
+  font-size: 14px;
+  color: #666666;
+  font-size: 14px;
+}
+
+mat-card-header {
+  background-color: #f5f5f5;
+}
+
+mat-card-content {
+  color: #333;
+}
+
+mat-divider {
+  margin-left: 0;
+  margin-right: 0;
+}
+
+mat-card-header,
+mat-card-content {
+  padding: 16px;
+}
+
+mat-card-actions {
+  display: flex;
+  justify-content: space-between; /* This will place one button at each end */
+  width: 100%;
+  padding: 8px;
+}
+
+.left-button {
+  margin-right: auto; /* Pushes all other elements to the right */
+}
+
+.right-button {
+  margin-left: auto; /* Pushes all other elements to the left */
+}
+
+.spacer {
+  flex-grow: 1; /* Takes up any available space */
+}
+mat-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  background-color: #fff;
+}
+
+.card-header-content {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.header-left,
+.header-right {
+  display: flex;
+  flex-direction: column;
+}
+
+mat-card-title,
+mat-card-subtitle {
+  margin: 0;
+}
+
+mat-card-content {
+  display: flex;
+  padding: 16px;
+}
+
+.content-container {
+  display: flex;
+  width: 100%;
+  align-items: center; /* Align items vertically in the center */
+}
+
+.product-image {
+  width: 80px; /* Adjust size as necessary */
+  height: auto;
+  margin-right: 16px;
+}
+
+.product-details {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.unique-code,
+.product-name,
+.category {
+  margin-bottom: 4px;
+}
+
+.order-card {
+  margin-top: 15px;
+  width: 95%;
+}

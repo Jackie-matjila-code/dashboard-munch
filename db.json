@@ -1,0 +1,71 @@
+{
+  "menu": [
+    {
+      "AdminMenuId": 1,
+      "Title": "Orders",
+      "Code": "Orders",
+      "Url": "Orders",
+      "ParentId": 0,
+      "submenus": []
+    },
+    {
+      "AdminMenuId": 2,
+      "Title": "In Progress",
+      "Code": "In-Progress",
+      "Url": "in-progress",
+      "ParentId": 0,
+      "submenus": []
+    },
+    {
+      "AdminMenuId": 3,
+      "Title": "Dashboard",
+      "Code": "Dashboard",
+      "Url": "dashboard",
+      "ParentId": 0,
+      "submenus": []
+    },
+    {
+      "AdminMenuId": 4,
+      "Title": "Settings",
+      "Code": "Settings",
+      "Url": "settings",
+      "ParentId": 0,
+      "submenus": []
+    }
+  ],
+  "orders": [
+    {
+      "id": "001",
+      "unique_code": "ORD-001",
+      "ordered_date": "2024-04-20T09:30:00",
+      "product_ordered": "Product A",
+      "person_name": "John Doe",
+      "day_ordered": "Monday",
+      "delivery_date": "2024-04-25T14:00:00",
+      "product_category": "Category X",
+      "stock_count": 50
+    },
+    {
+      "id": "002",
+      "unique_code": "ORD-002",
+      "ordered_date": "2024-04-19T12:45:00",
+      "product_ordered": "Product B",
+      "person_name": "Jane Smith",
+      "day_ordered": "Sunday",
+      "delivery_date": "2024-04-24T11:30:00",
+      "product_category": "Category Y",
+      "stock_count": 30
+    },
+    {
+      "id": "003",
+      "unique_code": "ORD-003",
+      "ordered_date": "2024-04-18T16:20:00",
+      "product_ordered": "Product C",
+      "person_name": "Alice Johnson",
+      "day_ordered": "Saturday",
+      "delivery_date": "2024-04-23T09:00:00",
+      "product_category": "Category Z",
+      "stock_count": 20
+    }
+  ]
+}
