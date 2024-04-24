@@ -14,6 +14,8 @@ import { MatListModule } from '@angular/material/list';
 import { OrdersComponent } from './components/orders/orders.component';
 import { MatCheckboxModule } from '@angular/material/checkbox';
 import { MatCardModule } from '@angular/material/card';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { MatGridListModule } from '@angular/material/grid-list';
 
 @NgModule({
   declarations: [
@@ -24,6 +26,8 @@ import { MatCardModule } from '@angular/material/card';
   ],
   imports: [
     CommonModule,
+    FormsModule,
+    ReactiveFormsModule,
     AdminRoutingModule,
     //Angilar Material
     MatMenuModule,
@@ -34,6 +38,7 @@ import { MatCardModule } from '@angular/material/card';
     MatListModule,
     MatCheckboxModule,
     MatCardModule,
+    MatGridListModule,
   ],
 })
 export class AdminModule {}

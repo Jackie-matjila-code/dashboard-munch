@@ -27,8 +27,7 @@
   z-index: 10;
   border-radius: 10px;
   border: none;
-  background: #fff; /* Set the background color or use a transparent image */
-  /* Add the background image for the search icon here with "no-repeat" */
+  background: #fff;
 }
 
 .search {
@@ -52,7 +51,7 @@
 }
 
 .text-container {
-  margin-left: 10px; /* Adjust as needed */
+  margin-left: 10px;
 }
 
 .title-text {
@@ -65,10 +64,6 @@
   font-size: 14px;
   color: #666666;
   font-size: 14px;
-}
-
-mat-card-header {
-  background-color: #f5f5f5;
 }
 
 mat-card-content {
@@ -87,28 +82,21 @@ mat-card-content {
 
 mat-card-actions {
   display: flex;
-  justify-content: space-between; /* This will place one button at each end */
+  justify-content: space-between;
   width: 100%;
   padding: 8px;
 }
 
 .left-button {
-  margin-right: auto; /* Pushes all other elements to the right */
+  margin-right: auto;
 }
 
 .right-button {
-  margin-left: auto; /* Pushes all other elements to the left */
+  margin-left: auto;
 }
 
 .spacer {
-  flex-grow: 1; /* Takes up any available space */
-}
-mat-card-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  width: 100%;
-  background-color: #fff;
+  flex-grow: 1;
 }
 
 .card-header-content {
@@ -126,6 +114,16 @@ mat-card-header {
 mat-card-title,
 mat-card-subtitle {
   margin: 0;
+}
+
+mat-card-title {
+  color: var(--black-087, rgba(0, 0, 0, 0.87));
+  font-family: Konnect;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 32px;
+  letter-spacing: 0.25px;
 }
 
 mat-card-content {
@@ -160,5 +158,8 @@ mat-card-content {
 
 .order-card {
   margin-top: 15px;
-  width: 95%;
+  width: 100%;
+  background: #fff;
+  box-shadow: 0px 1px 4px 0px rgba(0, 0, 0, 0.4);
+  border-radius: 8px;
 }

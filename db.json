@@ -4,7 +4,7 @@
       "AdminMenuId": 1,
       "Title": "Orders",
       "Code": "Orders",
-      "Url": "Orders",
+      "Url": "orders",
       "ParentId": 0,
       "submenus": []
     },
@@ -18,9 +18,9 @@
     },
     {
       "AdminMenuId": 3,
-      "Title": "Dashboard",
-      "Code": "Dashboard",
-      "Url": "dashboard",
+      "Title": "Completed",
+      "Code": "Completed",
+      "Url": "completed",
       "ParentId": 0,
       "submenus": []
     },
@@ -43,7 +43,9 @@
       "day_ordered": "Monday",
       "delivery_date": "2024-04-25T14:00:00",
       "product_category": "Category X",
-      "stock_count": 50
+      "stock_count": 50,
+      "size": "Grey LG",
+      "delivery_Day": "NextWeek"
     },
     {
       "id": "002",
@@ -54,7 +56,9 @@
       "day_ordered": "Sunday",
       "delivery_date": "2024-04-24T11:30:00",
       "product_category": "Category Y",
-      "stock_count": 30
+      "stock_count": 30,
+      "size": "Grey LG",
+      "delivery_Day": "NextDay"
     },
     {
       "id": "003",
@@ -65,7 +69,22 @@
       "day_ordered": "Saturday",
       "delivery_date": "2024-04-23T09:00:00",
       "product_category": "Category Z",
-      "stock_count": 20
+      "stock_count": 20,
+      "size": "Grey LG",
+      "delivery_Day": "SameDay"
+    },
+    {
+      "id": "003",
+      "unique_code": "ORD-003",
+      "ordered_date": "2024-04-18T16:20:00",
+      "product_ordered": "Product C",
+      "person_name": "Alice Johnson",
+      "day_ordered": "Saturday",
+      "delivery_date": "2024-04-24",
+      "product_category": "Category Z",
+      "stock_count": 20,
+      "size": "Grey LG",
+      "delivery_Day": "SameDay"
     }
   ]
 }

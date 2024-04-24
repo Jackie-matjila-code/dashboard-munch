@@ -5,34 +5,22 @@
 
   <div>
     <ul class="nav-list">
+      @for(item of menu; track item){
       <li class="nav-list-item">
-        <!-- <a
-        [href]="item.Url"
-        target="_blank"
-        [title]="item.Title"
-        [attr.data-id]="item.AdminMenuId"
-      >
-        <img [src]="'assets/images/' + item.Code + '.svg'" />
-        <div
-          [ngClass]="sideNavStatus ? 'active' : ''"
-          class="nav-item-title"
+        <a
+          [href]="item.Url"
+          routerLinkActive="active-menu"
+          target="_blank"
+          [title]="item.Title"
+          [attr.data-id]="item.AdminMenuId"
         >
-          {{ item.Title }}
-        </div>
-      </a> -->
-        <a routerLink="/orders" class="nav-item"
-          ><mat-icon>home</mat-icon>Orders</a
-        >
+          <img [src]="'assets/images/' + item.Code + '.svg'" />
+          <div class="nav-item-title">
+            {{ item.Title }}
+          </div>
+        </a>
       </li>
-      <li>
-        <a routerLink="">Orders</a>
-      </li>
-      <li>
-        <a routerLink="">Orders</a>
-      </li>
-      <li>
-        <a routerLink="">Orders</a>
-      </li>
+      }
     </ul>
   </div>
 </div>
