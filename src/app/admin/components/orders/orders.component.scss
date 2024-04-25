@@ -1,17 +1,17 @@
 .round {
-  width: calc(100% - 30px); /* Adjusted width to accommodate the icon */
+  width: calc(100% - 30px); 
   height: 17px;
-  border-radius: 5px;
+  border-radius: 8px;
   border: 1px #fff solid;
-  padding: 5px 5px 5px 40px; /* Increased left padding to make space for the icon */
+  padding: 8px 5px 5px 16px; 
   position: absolute;
   top: 0;
   left: 0;
   z-index: 5;
-  box-shadow: 1px 0px 4px rgba(102, 102, 102, 0.3);
-  //background-image: url(""); /* Add the path to your search icon */
-  background-repeat: no-repeat; /* Prevent icon from repeating */
-  background-position: 10px center; /* Positioning the icon */
+  background: var(--Surface-Card, #FFF);
+  box-shadow: 0px 0px 2px 0px rgba(0, 0, 0, 0.14), 0px 2px 2px 0px rgba(0, 0, 0, 0.12), 0px 1px 3px 0px rgba(0, 0, 0, 0.20);
+  background-repeat: no-repeat; 
+  background-position: 10px center;
 }
 
 .round:focus-visible {
@@ -43,6 +43,9 @@
 .filter-card {
   margin-top: 10px;
   width: 265px;
+  border-radius: 8px;
+background: var(--Surface-Card, #FFF);
+box-shadow: 0px 0px 2px 0px rgba(0, 0, 0, 0.14), 0px 2px 2px 0px rgba(0, 0, 0, 0.12), 0px 1px 3px 0px rgba(0, 0, 0, 0.20);
 }
 
 .checkbox-container {
@@ -165,6 +168,7 @@ mat-card-content {
   margin-top: 15px;
   width: 100%;
   background: #fff;
-  box-shadow: 0px 1px 4px 0px rgba(0, 0, 0, 0.4);
   border-radius: 8px;
+  background: #FFF;
+  box-shadow: 0px 1px 4px 0px rgba(0, 0, 0, 0.40);
 }
