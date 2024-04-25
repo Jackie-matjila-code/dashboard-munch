@@ -14,16 +14,17 @@ export class OrdersComponent {
   deliveryFilter = '';
 
   orderList: Orders[] = [];
-  filteredOrders: Orders[] = [];
+  //filteredOrders: Orders[] = [];
   searchValue: any;
+  text = 'Day of';
+  sameDayOrdersCount: any;
+  nextDayOrdersCount: any;
+  nextWeekOrdersCount: any;
 
   constructor(private adminService: AdminService) {}
 
   ngOnInit() {
     this.getOrderList();
-    // this.deliveryFilter.valueChanges.subscribe((values) => {
-    //   this.applyFilters(values);
-    // });
   }
 
   getOrderList() {
@@ -33,22 +34,28 @@ export class OrdersComponent {
         var today = new Date();
         if (this.deliveryFilter == 'sameDay') {
           day = today;
+          this.text = 'Same Day';
         } else if (this.deliveryFilter == 'nextDay') {
           day = new Date(today);
+          this.text = 'Next Day';
           day.setDate(today.getDate() + 1);
         } else if (this.deliveryFilter == 'nextWeek') {
           day = new Date(today);
           day.setDate(today.getDate() + 7);
+          this.text = 'Next Week';
         }
         this.orderList = data.filter(
           (item: any) =>
             item.delivery_date?.split('T')[0] === this.formatDate(day)
         );
       } else {
+       
         this.orderList = data;
+        //this.sameDayOrdersCount = data.filter.length;
       }
     });
   }
+
   formatDate(date: any) {
     var d = new Date(date),
       month = '' + (d.getMonth() + 1),
@@ -62,6 +69,7 @@ export class OrdersComponent {
   }
 
   applyFilters(selectedFilters: any) {
+    
     this.deliveryFilter = selectedFilters;
     this.getOrderList();
   }
@@ -77,17 +85,4 @@ export class OrdersComponent {
       this.getOrderList();
     }
   }
-  // filterValue: any;
-
-  // Filter() {
-  //   if (this.filterValue != '') {
-  //     this.orderList = this.orderList?.filter((data: any) => {
-  //       return data.delivery_Day
-  //         .toLocaleLowerCase()
-  //         .match(this.filterValue?.toLocaleLowerCase());
-  //     });
-  //   } else if (this.filterValue == '') {
-  //     this.getOrderList();
-  //   }
-  // }
 }

@@ -11,17 +11,17 @@
     />
   </div>
 
-  <div class="">
+  <!-- <div class="">
     <button
       class="example-margin"
-      value="sameDay"
+      value="nextWeek"
       (click)="applyFilters('nextWeek')"
     >
       Next Week
     </button>
     <button
       class="example-margin"
-      value="sameDay"
+      value="nextDay"
       (click)="applyFilters('nextDay')"
     >
       Next Day
@@ -33,12 +33,30 @@
     >
       Same Day
     </button>
-  </div>
+  </div> -->
 
   <mat-card class="filter-card">
     <mat-card-content>
       <div class="checkbox-container">
-        <mat-checkbox class="example-margin"></mat-checkbox>
+        <mat-checkbox class="example-margin"
+        checked="sameDay"
+        (change)="applyFilters('sameDay')"
+        ></mat-checkbox>
+        <div class="text-container">
+          <div class="title-text">Same day</div>
+          <p class="subtitle">{{ sameDayOrdersCount }} orders, 40 items</p>
+        </div>
+      </div>
+    </mat-card-content>
+  </mat-card>
+
+  <mat-card class="filter-card">
+    <mat-card-content>
+      <div class="checkbox-container">
+        <mat-checkbox class="example-margin"
+        checked="nextDay"
+        (change)="applyFilters('nextDay')"
+        ></mat-checkbox>
         <div class="text-container">
           <div class="title-text">Next day</div>
           <p class="subtitle">37 orders, 40 items</p>
@@ -50,9 +68,12 @@
   <mat-card class="filter-card">
     <mat-card-content>
       <div class="checkbox-container">
-        <mat-checkbox class="example-margin"></mat-checkbox>
+        <mat-checkbox class="example-margin"
+        checked="nextWeek"
+        (change)="applyFilters('nextWeek')"
+        ></mat-checkbox>
         <div class="text-container">
-          <div class="title-text">Next day</div>
+          <div class="title-text">Next Week</div>
           <p class="subtitle">37 orders, 40 items</p>
         </div>
       </div>
@@ -66,13 +87,13 @@
         <div class="header-left">
           <mat-card-title>{{ order.person_name }}</mat-card-title>
           <mat-card-subtitle
-            >Ordered {{ order.ordered_date }}</mat-card-subtitle
+            >Ordered {{ order.ordered_date | date:'dd MMMM YYYY h:mm a' }}</mat-card-subtitle
           >
         </div>
         <div class="header-right">
-          <mat-card-title>Next Day Shipping</mat-card-title>
+          <mat-card-title>{{ text }} Shipping</mat-card-title>
           <mat-card-subtitle
-            >Last brokered {{ order.delivery_date }}</mat-card-subtitle
+            >Last brokered {{ order.delivery_date | date:'dd  MMMM YYYY h:mm a' }}</mat-card-subtitle
           >
         </div>
       </div>
@@ -82,7 +103,7 @@
     <mat-card-content>
       <div class="content-container">
         <img
-          src="dummy-product-image.png"
+          src="assets/images/product.svg"
           alt="Product Image"
           class="product-image"
         />
@@ -97,12 +118,19 @@
     <mat-divider></mat-divider>
 
     <mat-card-actions>
-      <button mat-button class="left-button">
-        {{ order.product_category }}
-      </button>
+      <mat-chip-set aria-label="category-chip">
+        <mat-chip>
+          <img matChipAvatar src="assets/images/chip.svg" alt="category-chip"/>
+          {{ order.product_category }}
+        </mat-chip>
+      </mat-chip-set>
+      
       <span class="spacer"></span>
       <button mat-button color="primary" class="right-button">PACK</button>
     </mat-card-actions>
   </mat-card>
   }
+  <div *ngIf="orderList.length === 0">
+    <div class="center">No results found.</div>
+  </div>
 </div>

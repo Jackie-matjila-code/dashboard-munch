@@ -16,6 +16,7 @@ import { MatCheckboxModule } from '@angular/material/checkbox';
 import { MatCardModule } from '@angular/material/card';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MatGridListModule } from '@angular/material/grid-list';
+import {MatChipsModule} from '@angular/material/chips';
 
 @NgModule({
   declarations: [
@@ -39,6 +40,7 @@ import { MatGridListModule } from '@angular/material/grid-list';
     MatCheckboxModule,
     MatCardModule,
     MatGridListModule,
+    MatChipsModule
   ],
 })
 export class AdminModule {}

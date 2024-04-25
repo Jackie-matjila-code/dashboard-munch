@@ -87,12 +87,17 @@ mat-card-actions {
   padding: 8px;
 }
 
-.left-button {
-  margin-right: auto;
+mat-chip{
+  background-color: #CCE8F6 !important;
 }
 
 .right-button {
   margin-left: auto;
+  background: #008BD0;
+  border-radius: 4px ;
+  border: none;
+  height: 36px;
+  color: #ffffff;
 }
 
 .spacer {

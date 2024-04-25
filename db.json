@@ -44,8 +44,8 @@
       "delivery_date": "2024-04-25T14:00:00",
       "product_category": "Category X",
       "stock_count": 50,
-      "size": "Grey LG",
-      "delivery_Day": "NextWeek"
+      "size": "Grey LG"
+      
     },
     {
       "id": "002",
@@ -57,34 +57,59 @@
       "delivery_date": "2024-04-24T11:30:00",
       "product_category": "Category Y",
       "stock_count": 30,
-      "size": "Grey LG",
-      "delivery_Day": "NextDay"
+      "size": "Grey LG"
+      
     },
     {
       "id": "003",
       "unique_code": "ORD-003",
-      "ordered_date": "2024-04-18T16:20:00",
+      "ordered_date": "2024-05-02T16:20:00",
       "product_ordered": "Product C",
       "person_name": "Alice Johnson",
       "day_ordered": "Saturday",
       "delivery_date": "2024-04-23T09:00:00",
       "product_category": "Category Z",
       "stock_count": 20,
-      "size": "Grey LG",
-      "delivery_Day": "SameDay"
+      "size": "Grey LG"
+      
     },
     {
-      "id": "003",
+      "id": "004",
       "unique_code": "ORD-003",
-      "ordered_date": "2024-04-18T16:20:00",
-      "product_ordered": "Product C",
+      "ordered_date": "2024-05-08T16:20:00",
+      "product_ordered": "Product H",
+      "person_name": "Alice Johnson",
+      "day_ordered": "Saturday",
+      "delivery_date": "2024-04-26T09:00:00",
+      "product_category": "Category Z",
+      "stock_count": 20,
+      "size": "Grey LG"
+    },
+    {
+      "id": "005",
+      "unique_code": "ORD-003",
+      "ordered_date": "2024-04-26T16:20:00",
+      "product_ordered": "Product G",
       "person_name": "Alice Johnson",
       "day_ordered": "Saturday",
       "delivery_date": "2024-04-24",
       "product_category": "Category Z",
       "stock_count": 20,
-      "size": "Grey LG",
-      "delivery_Day": "SameDay"
+      "size": "Grey LG"
+      
+    },
+    {
+      "id": "006",
+      "unique_code": "ORD-003",
+      "ordered_date": "2024-04-18T16:20:00",
+      "product_ordered": "Product C",
+      "person_name": "Alice Johnson",
+      "day_ordered": "Saturday",
+      "delivery_date": "2024-04-27T09:00:00",
+      "product_category": "Category Z",
+      "stock_count": 20,
+      "size": "Grey LG"
+   
     }
   ]
 }
