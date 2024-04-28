@@ -10,4 +10,5 @@ export interface Orders {
   stock_count: number;
   size: string;
   product_image: string;
+  items:number;
 }

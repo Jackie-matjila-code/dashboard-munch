@@ -17,9 +17,9 @@ export class OrdersComponent {
   //filteredOrders: Orders[] = [];
   searchValue: any;
   text = 'Day of';
-  sameDayOrdersCount: any;
-  nextDayOrdersCount: any;
-  nextWeekOrdersCount: any;
+  sameDayOrdersCount = 0;
+  nextDayOrdersCount = 0;
+  nextWeekOrdersCount = 0;
 
   constructor(private adminService: AdminService) {}
 
@@ -27,8 +27,13 @@ export class OrdersComponent {
     this.getOrderList();
   }
 
+  
   getOrderList() {
     this.adminService.orders().subscribe((data) => {
+      let filteredOrdersCount = 0;
+      let sameDayCount = 0;
+      let nextDayCount = 0;
+      let nextWeekCount = 0;
       if (this.deliveryFilter) {
         let day: any = '';
         var today = new Date();
@@ -45,13 +50,29 @@ export class OrdersComponent {
           this.text = 'Next Week';
         }
         this.orderList = data.filter(
-          (item: any) =>
-            item.delivery_date?.split('T')[0] === this.formatDate(day)
+          (item: any) => {
+            if (item.delivery_date?.split('T')[0] === this.formatDate(day)) {
+              filteredOrdersCount++; 
+              if (this.deliveryFilter == 'sameDay') {
+                sameDayCount++;
+              } else if (this.deliveryFilter == 'nextDay') {
+                nextDayCount++;
+              } else if (this.deliveryFilter == 'nextWeek') {
+                nextWeekCount++;
+              }
+              return true;
+          
+            } else {
+              return false;
+            }
+           
+          }
         );
+        this.sameDayOrdersCount = sameDayCount;
+        this.nextDayOrdersCount = nextDayCount;
+        this.nextWeekOrdersCount = nextWeekCount;
       } else {
-       
         this.orderList = data;
-        //this.sameDayOrdersCount = data.filter.length;
       }
     });
   }
@@ -72,6 +93,11 @@ export class OrdersComponent {
     
     this.deliveryFilter = selectedFilters;
     this.getOrderList();
+
+
+    // setTimeout(() => {
+    //   window.location.reload();
+    // }, 6000);
   }
 
   search() {

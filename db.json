@@ -45,7 +45,9 @@
       "product_category": "Jackets",
       "stock_count": 50,
       "size": "Grey LG",
-      "product_image": "assets/images/product.svg"
+      "product_image": "assets/images/product.svg",
+      "items":40
+
     },
     {
       "id": "002",
@@ -58,7 +60,8 @@
       "product_category": "Jackets",
       "stock_count": 30,
       "size": "Grey LG",
-      "product_image": "assets/images/product.svg"
+      "product_image": "assets/images/product.svg",
+      "items":40
     },
     {
       "id": "003",
@@ -67,11 +70,12 @@
       "product_ordered": "Product C",
       "person_name": "Alice Johnson",
       "day_ordered": "Saturday",
-      "delivery_date": "2024-04-23T09:00:00",
+      "delivery_date": "2024-04-29T09:00:00",
       "product_category": "Jackets",
       "stock_count": 20,
       "size": "Grey LG",
-      "product_image": "assets/images/product.svg"
+      "product_image": "assets/images/product.svg",
+      "items":40
     },
     {
       "id": "004",
@@ -80,11 +84,13 @@
       "product_ordered": "Product H",
       "person_name": "Alice Johnson",
       "day_ordered": "Saturday",
-      "delivery_date": "2024-04-26T09:00:00",
+      "delivery_date": "2024-04-29T09:00:00",
       "product_category": "Jackets",
       "stock_count": 20,
       "size": "Grey LG",
-      "product_image": "assets/images/product.svg"
+      "product_image": "assets/images/product.svg",
+      "items":40
+      
     },
     {
       "id": "005",
@@ -93,11 +99,13 @@
       "product_ordered": "Product G",
       "person_name": "Alice Johnson",
       "day_ordered": "Saturday",
-      "delivery_date": "2024-04-24",
+      "delivery_date": "2024-04-28",
       "product_category": "Jackets",
       "stock_count": 20,
       "size": "Grey LG",
-      "product_image": "assets/images/product.svg"
+      "product_image": "assets/images/product.svg",
+      "items":40
+
     },
     {
       "id": "006",
@@ -106,11 +114,13 @@
       "product_ordered": "Product C",
       "person_name": "Alice Johnson",
       "day_ordered": "Saturday",
-      "delivery_date": "2024-04-27T09:00:00",
+      "delivery_date": "2024-04-28T09:00:00",
       "product_category": "Jackets",
       "stock_count": 20,
       "size": "Grey LG",
-      "product_image": "assets/images/product.svg"
+      "product_image": "assets/images/product.svg",
+      "items":40
+
     }
   ]
 }

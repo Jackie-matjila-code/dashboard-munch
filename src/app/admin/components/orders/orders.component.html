@@ -40,10 +40,10 @@
     <mat-card class="filter-card">
       <mat-card-content>
         <div class="checkbox-container">
-          <mat-checkbox class="example-margin" checked="sameDay" (change)="applyFilters('sameDay')"></mat-checkbox>
+          <mat-checkbox class="example-margin" [checked]="false" color="primary" (change)="applyFilters('sameDay')"></mat-checkbox>
           <div class="text-container">
             <div class="title-text">Same day</div>
-            <p class="subtitle">{{ sameDayOrdersCount }} orders, 40 items</p>
+            <p class="subtitle">{{ sameDayOrdersCount}} orders, 40 items</p>
           </div>
         </div>
       </mat-card-content>
@@ -52,10 +52,10 @@
     <mat-card class="filter-card">
       <mat-card-content>
         <div class="checkbox-container">
-          <mat-checkbox class="example-margin" checked="nextDay" (change)="applyFilters('nextDay')"></mat-checkbox>
+          <mat-checkbox class="example-margin" [checked]="false" color="primary" (change)="applyFilters('nextDay')"></mat-checkbox>
           <div class="text-container">
             <div class="title-text">Next day</div>
-            <p class="subtitle">37 orders, 40 items</p>
+            <p class="subtitle">{{ nextDayOrdersCount}} orders, 40 items</p>
           </div>
         </div>
       </mat-card-content>
@@ -64,10 +64,10 @@
     <mat-card class="filter-card">
       <mat-card-content>
         <div class="checkbox-container">
-          <mat-checkbox class="example-margin" checked="nextWeek" (change)="applyFilters('nextWeek')"></mat-checkbox>
+          <mat-checkbox class="example-margin" [checked]="false" color="primary" (change)="applyFilters('nextWeek')"></mat-checkbox>
           <div class="text-container">
             <div class="title-text">Next Week</div>
-            <p class="subtitle">37 orders, 40 items</p>
+            <p class="subtitle">{{ nextWeekOrdersCount}} orders, 40 items</p>
           </div>
         </div>
       </mat-card-content>
@@ -125,6 +125,6 @@
   </mat-card>
   }
   <div *ngIf="orderList.length === 0">
-    <div class="center">No results found.</div>
+    <div class="centered-text">No results found.</div>
   </div>
 </div>
