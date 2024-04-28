@@ -4,7 +4,7 @@
       "AdminMenuId": 1,
       "Title": "Orders",
       "Code": "Orders",
-      "Url": "orders",
+      "Url": "admin/orders",
       "ParentId": 0,
       "submenus": []
     },
@@ -12,7 +12,7 @@
       "AdminMenuId": 2,
       "Title": "In Progress",
       "Code": "In-Progress",
-      "Url": "in-progress",
+      "Url": "admin/in-progress",
       "ParentId": 0,
       "submenus": []
     },
@@ -20,7 +20,7 @@
       "AdminMenuId": 3,
       "Title": "Completed",
       "Code": "Completed",
-      "Url": "completed",
+      "Url": "admin/completed",
       "ParentId": 0,
       "submenus": []
     },
@@ -28,7 +28,7 @@
       "AdminMenuId": 4,
       "Title": "Settings",
       "Code": "Settings",
-      "Url": "settings",
+      "Url": "admin/settings",
       "ParentId": 0,
       "submenus": []
     }
@@ -42,10 +42,10 @@
       "person_name": "John Doe",
       "day_ordered": "Monday",
       "delivery_date": "2024-04-25T14:00:00",
-      "product_category": "Category X",
+      "product_category": "Jackets",
       "stock_count": 50,
-      "size": "Grey LG"
-      
+      "size": "Grey LG",
+      "product_image": "assets/images/product.svg"
     },
     {
       "id": "002",
@@ -55,10 +55,10 @@
       "person_name": "Jane Smith",
       "day_ordered": "Sunday",
       "delivery_date": "2024-04-24T11:30:00",
-      "product_category": "Category Y",
+      "product_category": "Jackets",
       "stock_count": 30,
-      "size": "Grey LG"
-      
+      "size": "Grey LG",
+      "product_image": "assets/images/product.svg"
     },
     {
       "id": "003",
@@ -68,10 +68,10 @@
       "person_name": "Alice Johnson",
       "day_ordered": "Saturday",
       "delivery_date": "2024-04-23T09:00:00",
-      "product_category": "Category Z",
+      "product_category": "Jackets",
       "stock_count": 20,
-      "size": "Grey LG"
-      
+      "size": "Grey LG",
+      "product_image": "assets/images/product.svg"
     },
     {
       "id": "004",
@@ -81,9 +81,10 @@
       "person_name": "Alice Johnson",
       "day_ordered": "Saturday",
       "delivery_date": "2024-04-26T09:00:00",
-      "product_category": "Category Z",
+      "product_category": "Jackets",
       "stock_count": 20,
-      "size": "Grey LG"
+      "size": "Grey LG",
+      "product_image": "assets/images/product.svg"
     },
     {
       "id": "005",
@@ -93,10 +94,10 @@
       "person_name": "Alice Johnson",
       "day_ordered": "Saturday",
       "delivery_date": "2024-04-24",
-      "product_category": "Category Z",
+      "product_category": "Jackets",
       "stock_count": 20,
-      "size": "Grey LG"
-      
+      "size": "Grey LG",
+      "product_image": "assets/images/product.svg"
     },
     {
       "id": "006",
@@ -106,10 +107,10 @@
       "person_name": "Alice Johnson",
       "day_ordered": "Saturday",
       "delivery_date": "2024-04-27T09:00:00",
-      "product_category": "Category Z",
+      "product_category": "Jackets",
       "stock_count": 20,
-      "size": "Grey LG"
-   
+      "size": "Grey LG",
+      "product_image": "assets/images/product.svg"
     }
   ]
 }

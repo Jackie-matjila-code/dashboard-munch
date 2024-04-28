@@ -1,5 +1,6 @@
-.round {
-  width: calc(100% - 30px); 
+.round-search {
+ 
+ width: 100%;
   height: 17px;
   border-radius: 8px;
   border: 1px #fff solid;
@@ -14,20 +15,8 @@
   background-position: 10px center;
 }
 
-.round:focus-visible {
+.round-search:focus-visible {
   outline: none;
-}
-
-.corner {
-  position: absolute;
-  top: 3px;
-  left: 5px;
-  height: 20px;
-  width: 20px;
-  z-index: 10;
-  border-radius: 10px;
-  border: none;
-  background: #fff;
 }
 
 .search {
@@ -38,14 +27,6 @@
 
 .container {
   padding: 14px;
-}
-
-.filter-card {
-  margin-top: 10px;
-  width: 265px;
-  border-radius: 8px;
-background: var(--Surface-Card, #FFF);
-box-shadow: 0px 0px 2px 0px rgba(0, 0, 0, 0.14), 0px 2px 2px 0px rgba(0, 0, 0, 0.12), 0px 1px 3px 0px rgba(0, 0, 0, 0.20);
 }
 
 .checkbox-container {
@@ -119,9 +100,15 @@ mat-chip{
   flex-direction: column;
 }
 
-mat-card-title,
-mat-card-subtitle {
-  margin: 0;
+
+mat-card-subtitle{
+color: var(--black-06, rgba(0, 0, 0, 0.60));
+font-family: Konnect;
+font-size: 14px;
+font-style: normal;
+font-weight: 400;
+line-height: 22px; 
+letter-spacing: 0.1px;
 }
 
 mat-card-title {
@@ -139,30 +126,73 @@ mat-card-content {
   padding: 16px;
 }
 
+.filter-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap:10px;
+}
+
+.filter-card {
+  margin-top: 15px;
+  width: 265px;
+  border-radius: 8px;
+  background: var(--Surface-Card, #FFF);
+  box-shadow: 0px 0px 2px 0px rgba(0, 0, 0, 0.14), 0px 2px 2px 0px rgba(0, 0, 0, 0.12), 0px 1px 3px 0px rgba(0, 0, 0, 0.20);
+
+}
+
 .content-container {
   display: flex;
   width: 100%;
-  align-items: center; /* Align items vertically in the center */
+  align-items: center; 
 }
 
 .product-image {
-  width: 80px; /* Adjust size as necessary */
-  height: auto;
-  margin-right: 16px;
+  display: flex;
+  width: 56px;
+  height: 56px;
+  justify-content: center;
+  align-items: center;
 }
 
 .product-details {
   flex-grow: 1;
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
+  align-items: start;
+  padding: 5px;
 }
 
-.unique-code,
-.product-name,
-.category {
-  margin-bottom: 4px;
-}
+.product-name{
+  color: var(--Text, rgba(0, 0, 0, 0.87));
+  font-family: Konnect;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px; 
+  letter-spacing: 0.15px;
+  }
+
+  .category{
+    color: var(--Text---Medium, #666);
+    font-family: Konnect;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 20px; 
+    letter-spacing: 0.25px;
+    }
+
+    .stock-number{
+      color: var(--Text, rgba(0, 0, 0, 0.87));
+      font-family: Konnect;
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 24px; 
+      letter-spacing: 0.15px;
+    }
+
 
 .order-card {
   margin-top: 15px;
@@ -171,4 +201,26 @@ mat-card-content {
   border-radius: 8px;
   background: #FFF;
   box-shadow: 0px 1px 4px 0px rgba(0, 0, 0, 0.40);
+}
+
+.unique-code{
+color: var(--Text, rgba(0, 0, 0, 0.87));
+font-family: Konnect;
+font-size: 10px;
+font-style: normal;
+font-weight: 500;
+line-height: 16px; 
+letter-spacing: 1.5px;
+text-transform: uppercase;
+}
+
+
+@media only screen and (max-width: 768px) {
+  .filter-card {
+    flex: 1 0 100%;
+  }
+
+  .round-search{
+    width: 97%;
+  }
 }

@@ -4,7 +4,7 @@
       #myInput
       type="text"
       name="search"
-      class="round"
+      class="round-search"
       placeholder="Search orders"
       [(ngModel)]="searchValue"
       (input)="search()"
@@ -35,50 +35,44 @@
     </button>
   </div> -->
 
-  <mat-card class="filter-card">
-    <mat-card-content>
-      <div class="checkbox-container">
-        <mat-checkbox class="example-margin"
-        checked="sameDay"
-        (change)="applyFilters('sameDay')"
-        ></mat-checkbox>
-        <div class="text-container">
-          <div class="title-text">Same day</div>
-          <p class="subtitle">{{ sameDayOrdersCount }} orders, 40 items</p>
-        </div>
-      </div>
-    </mat-card-content>
-  </mat-card>
 
-  <mat-card class="filter-card">
-    <mat-card-content>
-      <div class="checkbox-container">
-        <mat-checkbox class="example-margin"
-        checked="nextDay"
-        (change)="applyFilters('nextDay')"
-        ></mat-checkbox>
-        <div class="text-container">
-          <div class="title-text">Next day</div>
-          <p class="subtitle">37 orders, 40 items</p>
+  <div class="filter-container">
+    <mat-card class="filter-card">
+      <mat-card-content>
+        <div class="checkbox-container">
+          <mat-checkbox class="example-margin" checked="sameDay" (change)="applyFilters('sameDay')"></mat-checkbox>
+          <div class="text-container">
+            <div class="title-text">Same day</div>
+            <p class="subtitle">{{ sameDayOrdersCount }} orders, 40 items</p>
+          </div>
         </div>
-      </div>
-    </mat-card-content>
-  </mat-card>
-
-  <mat-card class="filter-card">
-    <mat-card-content>
-      <div class="checkbox-container">
-        <mat-checkbox class="example-margin"
-        checked="nextWeek"
-        (change)="applyFilters('nextWeek')"
-        ></mat-checkbox>
-        <div class="text-container">
-          <div class="title-text">Next Week</div>
-          <p class="subtitle">37 orders, 40 items</p>
+      </mat-card-content>
+    </mat-card>
+  
+    <mat-card class="filter-card">
+      <mat-card-content>
+        <div class="checkbox-container">
+          <mat-checkbox class="example-margin" checked="nextDay" (change)="applyFilters('nextDay')"></mat-checkbox>
+          <div class="text-container">
+            <div class="title-text">Next day</div>
+            <p class="subtitle">37 orders, 40 items</p>
+          </div>
         </div>
-      </div>
-    </mat-card-content>
-  </mat-card>
+      </mat-card-content>
+    </mat-card>
+  
+    <mat-card class="filter-card">
+      <mat-card-content>
+        <div class="checkbox-container">
+          <mat-checkbox class="example-margin" checked="nextWeek" (change)="applyFilters('nextWeek')"></mat-checkbox>
+          <div class="text-container">
+            <div class="title-text">Next Week</div>
+            <p class="subtitle">37 orders, 40 items</p>
+          </div>
+        </div>
+      </mat-card-content>
+    </mat-card>
+  </div>
 
   @for(order of orderList; track order){
   <mat-card class="order-card">
@@ -103,7 +97,7 @@
     <mat-card-content>
       <div class="content-container">
         <img
-          src="assets/images/product.svg"
+          [src]="order.product_image"
           alt="Product Image"
           class="product-image"
         />

@@ -17,6 +17,9 @@ import { MatCardModule } from '@angular/material/card';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MatGridListModule } from '@angular/material/grid-list';
 import {MatChipsModule} from '@angular/material/chips';
+import { SettingsComponent } from './components/settings/settings.component';
+import { InProgressComponent } from './components/in-progress/in-progress.component';
+import { CompletedComponent } from './components/completed/completed.component';
 
 @NgModule({
   declarations: [
@@ -24,6 +27,9 @@ import {MatChipsModule} from '@angular/material/chips';
     HeaderComponent,
     SideNavComponent,
     OrdersComponent,
+    SettingsComponent,
+    InProgressComponent,
+    CompletedComponent,
   ],
   imports: [
     CommonModule,

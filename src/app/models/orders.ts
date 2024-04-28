@@ -9,4 +9,5 @@ export interface Orders {
   product_category: string;
   stock_count: number;
   size: string;
+  product_image: string;
 }

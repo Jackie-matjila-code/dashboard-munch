@@ -58,17 +58,9 @@ mat-nav-list {
 .active {
   opacity: 1 !important;
 }
-.active-menu,
-.active-item {
-  background-color: #e4e9e6;
+.active {
+  background-color: red;
   font-weight: 600;
 }
-.active-menu.active-item {
-  background-color: orangered;
-}
 
-@media (min-width: 360px) and (max-width: 800px) {
-  .mat-drawer-inner-container {
-    display: none;
-  }
-}
+
